@@ -28,6 +28,7 @@ var inputArr = [
         marks: "",
     }
 ]
+var intialArr = JSON.parse(JSON.stringify(inputArr)) ;  //Cloning of array strigify convert into string and remove the refrence and parse convert into array object
 //function Dynamic Update of Row Id on Delete
 function updateRowId() {
     $("#inputTableGenerate tr").each((i, ele) => {
@@ -43,7 +44,7 @@ function intialRow(){
            <td><button  class="btn btn-outline-primary button-style" >Pass</button ><button class="btn btn-outline-danger button-style">Fail</button></td>
       </tr>`)
 }
-       
+   emptyArr();      
 
 }
 
@@ -146,7 +147,9 @@ $("#saveData").on( "click", function () {
         }
      })
  }
-
+ function emptyArr(){
+    inputArr = JSON.parse(JSON.stringify(intialArr)) ;
+ }
 $("#refresh").on("click", function refresh (){
     $("#inputTableGenerate").html("");
     $("#outputTableGenerate").html("");
