@@ -156,3 +156,36 @@ $("#refresh").on("click", function refresh (){
     count=0;
     intialRow();
 })
+
+// Function For Creating Matrix
+$("#matrix").on("click" ,function (){
+  
+    do{ 
+     var rowNo = parseInt(prompt("How many rows would you like?"));
+    if(isNaN(rowNo)){
+        alert("Enter a Valid Input")
+        rowNo=""
+    }
+    }while(isNaN(rowNo) || rowNo =='');
+   
+    do{ 
+        var colNo = parseInt(prompt("How many columns would you like?"));
+        if(isNaN(colNo)){
+            alert("Enter a Valid Input")
+            colNo=""
+        }
+     
+        }while(isNaN(colNo) || colNo =='');
+    
+    var matrixTable = "";
+    var cellNum=0, row=rowNo, col=colNo;
+        for (var r = 0; r < row ; r++) {
+        matrixTable += "<tr>";
+        for (var c = 0 ; c < col; c++ ) {
+            matrixTable += "<td>" + (++cellNum) + "</td>";
+        }
+        matrixTable += "</tr>";
+
+        }
+    $("#generateMatrix").html("<table border=5>" + matrixTable + "</table>");
+})
