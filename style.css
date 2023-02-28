@@ -45,6 +45,7 @@ body {
   z-index: 1;
   transition: 0.5s;
   backdrop-filter: blur(15px);
+ 
 }
 
 /* #outputTable{
@@ -58,6 +59,18 @@ body {
 	transition: 0.5s;
 	backdrop-filter: blur(15px);
 } */
+
+.matrix table td, tr{
+  
+  border-radius: 8px;
+  border: 2px solid;
+  text-align: center;
+  border-collapse: collapse;
+  color: rgb(17, 190, 190);
+  z-index: 1;
+	transition: 0.5s;
+	backdrop-filter: blur(15px);
+}
 table,
 td,
 tr {
@@ -129,14 +142,101 @@ input:focus {
   }
 }
 
-.matrix table td, tr{
-  
-  border-radius: 8px;
-  border: 2px solid;
-  text-align: center;
-  border-collapse: collapse;
-  color: rgb(17, 190, 190);
-  z-index: 1;
-	transition: 0.5s;
-	backdrop-filter: blur(15px);
+/* Counter */
+.path--background {
+  fill: rgb(55, 196, 67);
+  stroke: #fff;
+  stroke-width: 0px;
 }
+
+.pulse {
+  fill: rgb(255, 74, 74) !important;
+}
+
+.path--foreground {
+  fill: #eee;
+  stroke: #eee;
+  stroke-width: 2px;
+}
+
+.label {
+  font: 25px "Open Sans";
+  font-weight: 900;
+  text-anchor: middle;
+  fill: rgb(63, 152, 187);
+}
+
+/* Anitmation */
+/* Header */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Button */
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* button */
+@keyframes btn-animation {
+  from {
+    background-color: #ff7a59;
+    width: 150px;
+    top: 10px;
+  }
+  to {
+    background-color: #c85edd;
+    width: 80px;
+    top: 100px;
+  }
+}
+
+
+
+header {
+  animation: 1s ease-out 0s 1 slideInLeft;
+  background: #666;
+  padding: 40px;
+}
+
+
+
+.commonButtonCss{
+  animation-name: btn-animation;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.commonButtonCss:hover{
+  animation-name: wiggle;
+}
+
+
+/* Loading Animation */
