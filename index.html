@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>JQuery Task 1</title>
+   <title>JQuery Task 1.1</title>
    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
    <link rel="stylesheet" href="./bootstrap/bootstrap.bundle.min.js">
    <link rel="stylesheet" href="style.css">
@@ -14,15 +14,17 @@
 <body>
    
    <!-- Input Table Creation -->
-   <div class="container mt-1 ">
-      <header class="h1 row head-text bg-color">
-         <marquee>JQuery Task 1</marquee>
-      </header>
    
-      <div class="row justify-content-between">
-         <div class="col-sm-6"><button type="button" class="btn btn-primary commonButtonCss mb-4" id="addRow">Add Row</button></div>
-         <div class="col-sm-6"><button type="button" class="btn btn-outline-primary commonButtonCss mb-4" id="refresh">Refresh</button></div>
-         
+   <div class="container mt-1  ">
+     
+      <header class="h1 row head-text bg-color">
+         <marquee >JQuery Task 1.1</marquee>
+      </header>
+      <div class="row justify-content-around">
+         <div class="col-sm-3"><button type="button" class="btn btn-primary commonButtonCss mb-4 mt-4 " id="addRow">Add Row</button></div>
+         <div class="col-sm-3"><button type="button" class="btn btn-outline-primary commonButtonCss mb-4 mt-4" id="refresh">Refresh</button></div>
+         <div class="col-sm-3"><button type="button" class="btn btn-outline-primary commonButtonCss mb-4 mt-4" id="matrix">Click Here To See Matrix Task</button></div>
+         <div class="col-sm-3 " id="counter"></div>
       </div>
       <div class="over-flow">
          <table class="table  table-striped css-serial mainTable bg-color text">
@@ -37,11 +39,12 @@
             </tbody>
          </table>
       </div>
+    
       <div>
          <button type="button" class="btn btn-primary commonButtonCss mb-4" id="saveData">Save</button>
-      </div>
+      </div >
       <div id="generateMatrix" class=" mb-4 matrix">
-      </div> 
+      </div>   
       <div class="over-flow">
          <table class="table  table-striped css-serial bg-color text mainTable  ">
             <thead>
@@ -54,9 +57,16 @@
             </tbody>
          </table>
       </div>
+      
+      
    </div>
 </body>
+
 <script src="./js/jquery-3.6.3.js"></script>
 <script src="./js/script.js"></script>
+<script src="./svg/d3.min.js"></script>
+<script src="./js/sweetalert.min.js"></script>
+<script src="./js/sweetalert2@11"></script>
+
 
 </html>
