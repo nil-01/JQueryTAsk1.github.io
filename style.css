@@ -128,3 +128,15 @@ input:focus {
     display: none;
   }
 }
+
+.matrix table td, tr{
+  
+  border-radius: 8px;
+  border: 2px solid;
+  text-align: center;
+  border-collapse: collapse;
+  color: rgb(17, 190, 190);
+  z-index: 1;
+	transition: 0.5s;
+	backdrop-filter: blur(15px);
+}
